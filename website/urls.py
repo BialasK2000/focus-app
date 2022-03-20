@@ -1,6 +1,6 @@
 from django.urls import path, include
-from website.migrations import views
+from . import views
 
 urlpatterns = [
-    path('', )
+    path('', views.MainTasksView.as_view(), name='main-tasks-view'),
 ]

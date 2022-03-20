@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Focus</title>
+</head>
+<body>
+<h1>SIEMANO</h1>
+<ul>
+{% for task in object_list %}
+    <li>{{ task.name }} | {{ task.deadline }}<br>{{ task.description }}</li>
+{% empty %}
+    <li>No tasks yet.</li>
+{% endfor %}
+</ul>
+</body>
+</html>
