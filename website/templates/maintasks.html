@@ -9,6 +9,7 @@
 <ul>
 {% for task in tasks %}
     <li>{{ task.name }} | {{ task.deadline }}<br>{{ task.description }}</li>
+    <a href="{% url 'detail-tasks-view' task.id %}">Details</a>
 {% empty %}
     <li>No tasks yet.</li>
 {% endfor %}
