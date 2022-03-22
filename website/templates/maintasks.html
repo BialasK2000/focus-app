@@ -7,13 +7,16 @@
 <body>
 <h1>SIEMANO, TO JO!</h1>
 <a href="{% url 'create-tasks' %}">Create a task</a>
-<ul>
+<table>
 {% for task in tasks %}
-    <li>{{ task.name }} | {{ task.deadline }}<br>{{ task.description }}</li>
-    <a href="{% url 'detail-tasks' task.id %}">Details</a>
+<tr>
+    <td>{{ task.name }} | {{ task.deadline }}<br>{{ task.description }}</td>
+    <td><a href="{% url 'detail-tasks' task.id %}">Details</a></td>
+    <td><a href="{% url 'update-tasks' task.id %}">Update</a></td>
+</tr>
 {% empty %}
-    <li>No tasks yet.</li>
+    <h3>No tasks yet.</h3>
 {% endfor %}
-</ul>
+</table>
 </body>
 </html>

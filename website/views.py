@@ -24,3 +24,9 @@ class CreateTaskView(CreateView):
     template_name = "createtasks.html"
     success_url = reverse_lazy('main-tasks')
 
+
+class TaskUpdateView(UpdateView):
+    model = Task
+    fields = '__all__'
+    template_name = "createtasks.html"
+    success_url = reverse_lazy('main-tasks')
