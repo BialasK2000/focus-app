@@ -5,11 +5,12 @@
     <title>Focus</title>
 </head>
 <body>
-<h1>SIEMANO</h1>
+<h1>SIEMANO, TO JO!</h1>
+<a href="{% url 'create-tasks' %}">Create a task</a>
 <ul>
 {% for task in tasks %}
     <li>{{ task.name }} | {{ task.deadline }}<br>{{ task.description }}</li>
-    <a href="{% url 'detail-tasks-view' task.id %}">Details</a>
+    <a href="{% url 'detail-tasks' task.id %}">Details</a>
 {% empty %}
     <li>No tasks yet.</li>
 {% endfor %}
