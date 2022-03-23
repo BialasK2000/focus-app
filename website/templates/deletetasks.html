@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<form method="POST">
+    {% csrf_token %}
+    <p>Are you sure, you want to delete "{{ task }}"?</p>
+    <button type="submit">Yes</button><br><a href="{% url 'main-tasks' %}">No, go back</a>
+</form>
+</body>
+</html>
