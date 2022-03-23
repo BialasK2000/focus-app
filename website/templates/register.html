@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
 </head>
 <body>
-<h1>Login</h1>
+<h1>Register</h1>
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <input value="Login" type="submit">
+    <input value="Register" type="submit">
 </form>
 
-<p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+<p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
 </body>
 </html>
