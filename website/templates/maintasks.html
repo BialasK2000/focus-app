@@ -5,6 +5,14 @@
     <title>Focus</title>
 </head>
 <body>
+{% if request.user.is_authenticated %}
+<p>{{ request.user }}</p>
+<a href="{% url 'logout' %}">Logout</a>
+{% else %}
+<a href="{% url 'login' %}">Login</a>
+{% endif %}
+
+<hr>
 <h1>SIEMANO, TO JO!</h1>
 <a href="{% url 'create-tasks' %}">Create a task</a>
 <table>
