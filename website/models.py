@@ -7,7 +7,7 @@ class Task(models.Model):
     description = models.TextField(max_length=1337)
     deadline = models.DateTimeField()
     status = models.BooleanField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
         return self.name
