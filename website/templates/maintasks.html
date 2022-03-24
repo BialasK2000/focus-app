@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
+{% block content %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Focus</title>
 </head>
 <body>
 {% if request.user.is_authenticated %}
@@ -29,3 +29,4 @@
 </table>
 </body>
 </html>
+{% endblock content %}
