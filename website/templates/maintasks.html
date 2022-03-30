@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
 </head>
 <body>
+<div class="header-bar">
+    <div>
+        <h1>Hi, {{ request.user.username }}</h1>
+    </div>
+</div>
 {% if request.user.is_authenticated %}
 <p>{{ request.user }}</p>
 <a href="{% url 'logout' %}">Logout</a>
@@ -12,8 +17,10 @@
 <a href="{% url 'login' %}">Login</a>
 {% endif %}
 
+
 <hr>
-<h1>SIEMANO, TO JO!</h1>
+<h1>Hi!</h1>
+<div class="container">
 <a href="{% url 'create-tasks' %}">Create a task</a>
 
 <form method="GET">
@@ -33,6 +40,7 @@
     <h3>No tasks yet.</h3>
 {% endfor %}
 </table>
+</div>
 </body>
 </html>
 {% endblock content %}

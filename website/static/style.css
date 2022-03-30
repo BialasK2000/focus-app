@@ -1,4 +1,11 @@
-.container{
+body {
+    background-color: #FAFAFA;
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+.container {
             max-width: 650px;
             margin: auto;
             background-color: #fff;
