@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
@@ -31,6 +31,12 @@ class BetaRegisterView(FormView):
             login(self.request, user)
         return super(BetaRegisterView, self).form_valid(form)
 
+    def get(self, *args, **kwargs):
+        if self.request.user.is_authenticated:
+            return redirect('main-tasks')
+        else:
+            return super(BetaRegisterView, self).get(*args, **kwargs)
+
 class BetaLogoutView(LogoutView):
     next_page = "login"
 
@@ -44,6 +50,13 @@ class MainTasksView(LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
         context['tasks'] = context['tasks'].filter(user=self.request.user)
         context['count'] = context['tasks'].filter(status=False).count()
+
+        search_input = self.request.GET.get('search_bar') or ''
+        if search_input:
+            context['tasks'] = context['tasks'].filter(name__icontains=search_input)
+
+        context['search_input'] = search_input
+
         return context
 
 

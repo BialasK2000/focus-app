@@ -15,6 +15,12 @@
 <hr>
 <h1>SIEMANO, TO JO!</h1>
 <a href="{% url 'create-tasks' %}">Create a task</a>
+
+<form method="GET">
+    <input type="text" name="search_bar" value="{{ search_input }}">
+    <input type="submit" value="Search">
+</form>
+
 <table>
 {% for task in tasks %}
 <tr>
