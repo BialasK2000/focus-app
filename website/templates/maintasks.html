@@ -5,21 +5,23 @@
     <meta charset="UTF-8">
 </head>
 <body>
+<div class="user-header-info">
+{% if request.user.is_authenticated %}
+<p class="user-nickname">{{ request.user }}</p>
+<a class="user-log" href="{% url 'logout' %}">Logout</a>
+{% else %}
+<a class="user-log" href="{% url 'login' %}">Login</a>
+{% endif %}
+</div>
 <div class="header-bar">
     <div>
-        <h1>Hi, {{ request.user.username }}</h1>
+        <h1>Welcome, {{ request.user.username|title }}.</h1>
+        <h3>You currently have <div class="undone-number">{{ tasks.count }}</div> active task{{ count|pluralize:"s"}}.</h3>
     </div>
 </div>
-{% if request.user.is_authenticated %}
-<p>{{ request.user }}</p>
-<a href="{% url 'logout' %}">Logout</a>
-{% else %}
-<a href="{% url 'login' %}">Login</a>
-{% endif %}
 
 
-<hr>
-<h1>Hi!</h1>
+
 <div class="container">
 <a href="{% url 'create-tasks' %}">Create a task</a>
 

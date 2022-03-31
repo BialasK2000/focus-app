@@ -1,14 +1,49 @@
 body {
-    background-color: #FAFAFA;
+    background-color: #000000;
     font-family: 'Inter', sans-serif;
+    color: #F6F3ED;
+    margin: 0;
+    padding: 0;
 }
 
-
-
 .container {
-            max-width: 650px;
-            margin: auto;
-            background-color: #fff;
-            -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
-            box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    max-width: 550px;
+    margin: auto;
+    background-color: #242424;
+    -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
         }
+
+.header-bar {
+    text-align: center;
+}
+
+.undone-number {
+    color: #4cbb17;
+    font-weight: bold;
+}
+
+.user-header-info {
+    display: flex
+    justify-content: space-between;
+    color: #fff;
+    background: #000000;
+    margin-right: 5%;
+    text-align: right;
+}
+
+.user-header-info a {
+    text-decoration: none;
+    color: #2E4755;
+    font-weight: bold;
+}
+
+.user-nickname {
+    padding-top: 1%;
+    font-size: 25px;
+    margin-bottom: 4px;
+}
+
+.user-log {
+    margin-top: 0;
+}
