@@ -13,5 +13,5 @@ class Task(models.Model):
         return self.name
 
     class Meta:
-        ordering = ['deadline']
+        ordering = ['-status', 'deadline']
 
