@@ -17,10 +17,17 @@ body {
 .container {
     max-width: 550px;
     margin: auto;
+    margin-top: 30px;
     background-color: #000000;
     -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
     box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
         }
+
+.link-link {
+    color: #2E4755;
+    text-decoration: none;
+    font-weight: bold;
+}
 
 .header-bar {
     display: flex;
@@ -91,6 +98,25 @@ body {
     width: 20px;
     background-color: #2E4755;
     border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(46, 71, 85, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(46, 71, 85, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(46, 71, 85, 0);
+	}
 }
 
 .task-incomplete-icon {
@@ -98,4 +124,69 @@ body {
     width: 20px;
     background-color: rgb(218, 218, 218);
     border-radius: 50%;
+}
+
+.search-bar {
+    margin-top: 20px;
+    display: flex;
+}
+
+.search-bar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+#create-link {
+    color: #2E4755;
+    text-decoration: none;
+    font-size: 50px;
+    text-shadow: 1px 1px #2E4755;
+}
+
+input[type=text],
+input[type=password],
+textarea {
+    border 1px solid #2E4755;
+    border-radius: 5px;
+    padding: 10px;
+    width : 90%;
+}
+
+label {
+    padding-top: 10px !important;
+    display: block;
+}
+
+.button {
+    border: 2px solid #2E4755;
+    background-color: #000000;
+    color: #F6F3ED;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.go-back-arrow {
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: #2E4755;
+    font-size: 20px;
+}
+
+#back-arrow {
+    text-decoration: none;
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: #2E4755;
+    font-size: 20px;
+}
+
+.body-form {
+    padding: 20px;
+
 }

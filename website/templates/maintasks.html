@@ -16,19 +16,18 @@
 <div class="header-bar">
     <div>
         <h1>Welcome, {{ request.user.username|title }}.</h1>
-        <h3>You currently have <div class="undone-number">{{ tasks.count }}</div> active task{{ count|pluralize:"s"}}.</h3>
+        <!--<h3>You currently have <div class="undone-number">{{ tasks.count }}</div> active task{{ count|pluralize:"s"}}.</h3> -->
     </div>
 </div>
-
-
-
 <div class="container">
-<a href="{% url 'create-tasks' %}">Create a task</a>
 
-<form method="GET">
+<div class="search-bar-wrapper">
+<form method="GET" class="search-bar">
     <input type="text" name="search_bar" value="{{ search_input }}">
-    <input type="submit" value="Search">
+    <input class="button" type="submit" value="Search">
 </form>
+    <a id="create-link" href="{% url 'create-tasks' %}">&#x2b;</a>
+</div>
 
     <div class="tasks-wrapper">
         {% for task in tasks %}
