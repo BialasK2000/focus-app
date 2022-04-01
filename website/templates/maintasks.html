@@ -23,7 +23,7 @@
 
 <div class="search-bar-wrapper">
 <form method="GET" class="search-bar">
-    <input type="text" name="search_bar" value="{{ search_input }}">
+    <input class="search-box" type="text" name="search_bar" value="{{ search_input }}">
     <input class="search-button" type="submit" value="Search">
 </form>
     <a id="create-link" href="{% url 'create-tasks' %}">&#x2b;</a>
@@ -37,12 +37,13 @@
                     <div class="task-completed-icon"></div>
                     <s><a href="{% url 'update-tasks' task.id %}">{{ task }}</a></s>
                 </div>
+            <a class="delete-done-link" href="{% url 'delete-tasks' task.id %}">&#10004;</a>
             {% else %}
                 <div class="task-name">
                     <div class="task-incomplete-icon"></div>
                     <a href="{% url 'update-tasks' task.id %}">{{ task }}</a>
                 </div>
-            <a class="delete-link" href="{% url 'delete-tasks' task.id %}">&#215;</a>
+            <a class="delete-link" href="{% url 'delete-tasks' task.id %}">&#10006;</a>
             {% endif %}
         </div>
         {% empty %}
