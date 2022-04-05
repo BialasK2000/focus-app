@@ -1,3 +1,5 @@
+from django import forms
+from .forms import DateInput
 from django.shortcuts import render, redirect
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -73,6 +75,11 @@ class CreateTaskView(LoginRequiredMixin, CreateView):
     fields = ['name', 'description', 'deadline', 'status']
     template_name = "createtasks.html"
     success_url = reverse_lazy('main-tasks')
+
+    def get_form(self):
+        form = super(CreateTaskView, self).get_form()
+        form.fields['deadline'].widget = DateInput()
+        return form
 
     def form_valid(self, form):
         form.instance.user = self.request.user
