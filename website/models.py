@@ -14,4 +14,3 @@ class Task(models.Model):
 
     class Meta:
         ordering = ['-status', 'deadline']
-

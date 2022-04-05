@@ -1,3 +1,4 @@
+import random
 from django import forms
 from .forms import DateInput
 from django.shortcuts import render, redirect
@@ -61,7 +62,21 @@ class MainTasksView(LoginRequiredMixin, ListView):
 
         context['search_input'] = search_input
 
+        quotes = ['"Logic will take you from A to B. Imagination will take you everywhere."',
+                  '"Hate is a lack of imagination."',
+                  '"I am a brain, Watson. The rest of me is a mere appendix."',
+                  '"Beauty you are born with, but brains you earn."',
+                  '"I not only use all the brains that I have, but all I can borrow."',
+                  '"It’s not that I’m so smart, it’s just that I stay with problems longer."',
+                  '"Any fool can know. The point is to understand."',
+                  '"The measure of intelligence is the ability to change."',
+                  '"Try not to become a person of success, but rather try to become a person of value."',
+                  '"Education is not the learning of the facts, but the training of the mind to think."', ]
+
+        context['random_quote'] = random.choice(quotes)
+
         return context
+
 
 
 class DetailTaskView(LoginRequiredMixin, DetailView):
@@ -91,6 +106,11 @@ class TaskUpdateView(LoginRequiredMixin, UpdateView):
     fields = ['name', 'description', 'deadline', 'status']
     template_name = "createtasks.html"
     success_url = reverse_lazy('main-tasks')
+
+    def get_form(self):
+        form = super(TaskUpdateView, self).get_form()
+        form.fields['deadline'].widget = DateInput()
+        return form
 
 
 class TaskDeleteView(LoginRequiredMixin, DeleteView):

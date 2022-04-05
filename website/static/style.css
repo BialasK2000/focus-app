@@ -1,5 +1,4 @@
 body {
-    background: #000000;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -7,7 +6,75 @@ body {
     color: #F6F3ED;
     margin: 0;
     padding: 0;
+    background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+    overflow: hidden;
 }
+
+.tlotlo {
+    position: absolute;
+    z-index: -1;
+}
+
+#home {
+  clip-path: url(#cache);
+}
+
+#red {
+  fill: none;
+  opacity: 0.15;
+  stroke: #CE1B5F;
+  stroke-width: 12;
+  stroke-miterlimit:10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06A1C4;
+  stroke-width: 12;
+  stroke-miterlimit:10;
+  animation: show 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#light-blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06A1C4;
+  stroke-width: 8;
+  stroke-miterlimit:10;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 800;
+  animation: draw 30s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+ }
+    }
+
+@keyframes show {
+  0% {
+    opacity: 0.15;
+ }
+  50% {
+    opacity: 0.2;
+ }
+  100% {
+    opacity: 0.15;
+ }
+    }
+
 
 /* width */
 ::-webkit-scrollbar {
@@ -35,12 +102,12 @@ body {
         }
 
 .container {
+    z-index: 1;
     max-width: 550px;
     margin: auto;
-    margin-top: 30px;
-    background-color: #000000;
-    -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
-    box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.21);
+    margin-top: 0px;
+    padding-top: 30px;
+    background-color: rgb(0, 0, 0, 0);
         }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -315,7 +382,7 @@ body {
     display: flex
     justify-content: space-between;
     color: #fff;
-    background: #000000;
+    background: rgb(0, 0, 0, 0);
     padding-right: 3%;
     text-align: right;
 }
@@ -332,6 +399,11 @@ body {
     margin-bottom: 4px;
 }
 
+.random-quote {
+    padding-top: 15px;
+    font-family: "American Typewriter", serif;
+}
+
 .user-log {
     margin-top: 0;
 }
@@ -342,12 +414,18 @@ body {
     justify-content: space-between;
     padding: 20px;
     background-color: #1d1b31;
-    border: 2px solid #000000;
     border-radius: 15px;
+    margin-bottom: 5px;
+}
+
+.deadline-task {
+    margin-left: 10px;
+    opacity: 0.2;
 }
 
 .task-name {
     display: flex;
+    font-size: 20px;
 }
 
 .task-name a {
