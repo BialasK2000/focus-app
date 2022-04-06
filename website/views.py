@@ -71,7 +71,20 @@ class MainTasksView(LoginRequiredMixin, ListView):
                   '"Any fool can know. The point is to understand."',
                   '"The measure of intelligence is the ability to change."',
                   '"Try not to become a person of success, but rather try to become a person of value."',
-                  '"Education is not the learning of the facts, but the training of the mind to think."', ]
+                  '"Education is not the learning of the facts, but the training of the mind to think."',
+                  '"Spread love everywhere you go. Let no one ever come to you without leaving happier."',
+                  '"Always remember that you are absolutely unique. Just like everyone else."',
+                  '"Do not judge each day by the harvest you reap but by the seeds that you plant."',
+                  '"The future belongs to those who believe in the beauty of their dreams."',
+                  '"Tell me and I forget. Teach me and I remember. Involve me and I learn."',
+                  '"It is during our darkest moments that we must focus to see the light."',
+                  '"Life is a long lesson in humility."',
+                  '"Success usually comes to those who are too busy to be looking for it."',
+                  '"The way to get started is to quit talking and begin doing."',
+                  '"If you really look closely, most overnight successes took a long time."',
+                  '"The road to success and the road to failure are almost exactly the same."',
+                  '"If you want to achieve excellence, you can get there today. As of this second, quit doing less-than-excellent work."',
+                  '"Before anything else, preparation is the key to success."',]
 
         context['random_quote'] = random.choice(quotes)
 

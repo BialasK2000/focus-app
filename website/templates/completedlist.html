@@ -15,7 +15,7 @@
 
     <div class="tasks-wrapper">
         {% for task in tasks %}
-        {% if task.visible == False %}
+        {% if task.visible == True %}
         <div class="specific-task-completed">
             {% if task.status %}
                 <div class="task-name">

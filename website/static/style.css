@@ -610,8 +610,8 @@ label {
 
 .niewidka {
     accent-color: #9d3039;
-    height: 30px;
-    width: 30px;
+    height: 80px;
+    width: 80px;
 }
 
 .retrieve-link {
@@ -630,4 +630,16 @@ label {
     color: #E23636;
     font-size: 27px;
     line-height: 0;
+}
+
+.peleryna_niewidka {
+    padding: 210px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+.niewidka-text {
+    text-align: center;
+    font-size: 28px;
 }

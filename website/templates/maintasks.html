@@ -31,12 +31,12 @@
 
     <div class="tasks-wrapper">
         {% for task in tasks %}
-        {% if task.visible %}
+        {% if task.visible == False %}
         <div class="specific-task">
             {% if task.status %}
                 <div class="task-name">
                     <div class="task-completed-icon"></div>
-                    <s><a href="{% url 'update-tasks' task.id %}">{{ task }}</a></s>
+                    <a href="{% url 'update-tasks' task.id %}">{{ task }}</a>
                     <div class="deadline-task">{{ task.deadline }}</div>
                 </div>
             <a class="delete-done-link" href="{% url 'confirm-tasks' task.id %}">&#10004;</a>
