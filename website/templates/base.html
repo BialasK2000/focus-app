@@ -24,13 +24,13 @@
          <input type="text" placeholder="Search...">
          <span class="tooltip">Search</span>
       </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-grid-alt'></i>
-          <span class="links_name">Dashboard</span>
-        </a>
-         <span class="tooltip">Dashboard</span>
-      </li>
+		<li>
+       <a href="{% url 'main-tasks' %}">
+         <i class='bx bx-home' ></i>
+         <span class="links_name">Your Focus</span>
+       </a>
+       <span class="tooltip">Focus</span>
+     </li>
       <li>
        <a href="#">
          <i class='bx bx-user'></i>
@@ -52,13 +52,13 @@
        </a>
        <span class="tooltip">Analytics</span>
      </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-folder' ></i>
-         <span class="links_name">Your Data</span>
-       </a>
-       <span class="tooltip">Data</span>
-     </li>
+		<li>
+        <a href="{% url 'completed-tasks' %}">
+          <i class='bx bx-trash'></i>
+          <span class="links_name">Completed Tasks</span>
+        </a>
+         <span class="tooltip">Completed Tasks</span>
+      </li>
      <li>
        <a href="#">
          <i class='bx bx-star' ></i>

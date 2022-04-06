@@ -230,7 +230,7 @@ body {
   width: 100%;
 }
 
-.sidebar .bx-grid-alt {
+.sidebar .bx-trash {
     font-size: 28px;
 }
 
@@ -246,7 +246,7 @@ body {
     font-size: 28px;
 }
 
-.sidebar .bx-folder {
+.sidebar .bx-home {
     font-size: 28px;
 }
 
@@ -454,6 +454,16 @@ body {
     margin-bottom: 5px;
 }
 
+.specific-task-completed {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1d1b31;
+    border-radius: 15px;
+    margin-bottom: 5px;
+}
+
 .deadline-task {
     margin-left: 10px;
     opacity: 0.2;
@@ -600,6 +610,24 @@ label {
 
 .niewidka {
     accent-color: #9d3039;
-    height: 30px; /* not needed */
-    width: 30px; /* not needed */
+    height: 30px;
+    width: 30px;
+}
+
+.retrieve-link {
+    transform: rotate(-90deg);
+    text-decoration: none;
+    font-weight: 900;
+    color: #E23636;
+    font-size: 27px;
+    line-height: 0;
+}
+
+.delete-link-completed {
+    transform: rotate(-90deg);
+    text-decoration: none;
+    font-weight: 900;
+    color: #E23636;
+    font-size: 27px;
+    line-height: 0;
 }

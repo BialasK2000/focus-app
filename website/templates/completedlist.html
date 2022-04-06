@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div class="container">
+<div class="search-bar-wrapper">
+<form method="GET" class="search-bar">
+    <input type="text" name="search_bar" value="{{ search_input }}">
+    <input class="search-button" type="submit" value="Search">
+</form>
+</div>
+
+    <div class="tasks-wrapper">
+        {% for task in tasks %}
+        {% if task.visible == False %}
+        <div class="specific-task-completed">
+            {% if task.status %}
+                <div class="task-name">
+                    <a class="retrieve-link" href="{% url 'confirm-tasks' task.id %}">&#10148;</a>
+                    <a href="{% url 'update-tasks' task.id %}">{{ task }}</a>
+                    <div class="deadline-task">{{ task.deadline }}</div>
+                </div>
+            <a class="delete-link-completed" href="{% url 'delete-tasks' task.id %}">&#10006;</a>
+            {% else %}
+                <div class="task-name">
+                    <div class="task-incomplete-icon"></div>
+                    <a href="{% url 'update-tasks' task.id %}">{{ task }}</a>
+                    <div class="deadline-task">{{ task.deadline }}</div>
+                </div>
+            <a class="delete-link" href="{% url 'delete-tasks' task.id %}">&#10006;</a>
+            {% endif %}
+        </div>
+        {% endif %}
+        {% empty %}
+        <h3>No tasks completed.</h3>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>
+{% endblock content %}
