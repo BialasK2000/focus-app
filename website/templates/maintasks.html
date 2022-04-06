@@ -21,7 +21,6 @@
     </div>
 </div>
 <div class="container">
-
 <div class="search-bar-wrapper">
 <form method="GET" class="search-bar">
     <input type="text" name="search_bar" value="{{ search_input }}">
@@ -32,6 +31,7 @@
 
     <div class="tasks-wrapper">
         {% for task in tasks %}
+        {% if task.visible %}
         <div class="specific-task">
             {% if task.status %}
                 <div class="task-name">
@@ -39,7 +39,7 @@
                     <s><a href="{% url 'update-tasks' task.id %}">{{ task }}</a></s>
                     <div class="deadline-task">{{ task.deadline }}</div>
                 </div>
-            <a class="delete-done-link" href="{% url 'delete-tasks' task.id %}">&#10004;</a>
+            <a class="delete-done-link" href="{% url 'confirm-tasks' task.id %}">&#10004;</a>
             {% else %}
                 <div class="task-name">
                     <div class="task-incomplete-icon"></div>
@@ -49,6 +49,7 @@
             <a class="delete-link" href="{% url 'delete-tasks' task.id %}">&#10006;</a>
             {% endif %}
         </div>
+        {% endif %}
         {% empty %}
         <h3>No tasks yet.</h3>
         {% endfor %}

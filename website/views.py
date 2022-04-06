@@ -1,6 +1,6 @@
 import random
 from django import forms
-from .forms import DateInput
+from .forms import DateInput, VisibilityForm
 from django.shortcuts import render, redirect
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
@@ -116,4 +116,11 @@ class TaskUpdateView(LoginRequiredMixin, UpdateView):
 class TaskDeleteView(LoginRequiredMixin, DeleteView):
     model = Task
     template_name = "deletetasks.html"
+    success_url = reverse_lazy('main-tasks')
+
+
+class TaskInvisibleView(LoginRequiredMixin, UpdateView):
+    model = Task
+    form_class = VisibilityForm
+    template_name = "invisibletask.html"
     success_url = reverse_lazy('main-tasks')

@@ -597,3 +597,9 @@ label {
 .body-form {
     padding: 20px;
 }
+
+.niewidka {
+    accent-color: #9d3039;
+    height: 30px; /* not needed */
+    width: 30px; /* not needed */
+}
