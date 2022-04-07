@@ -84,7 +84,8 @@ class MainTasksView(LoginRequiredMixin, ListView):
                   '"If you really look closely, most overnight successes took a long time."',
                   '"The road to success and the road to failure are almost exactly the same."',
                   '"If you want to achieve excellence, you can get there today. As of this second, quit doing less-than-excellent work."',
-                  '"Before anything else, preparation is the key to success."',]
+                  '"Before anything else, preparation is the key to success."',
+                  ]
 
         context['random_quote'] = random.choice(quotes)
 
