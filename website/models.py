@@ -22,7 +22,7 @@ class Task(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
-    avatar = models.ImageField(default='default.jpg', upload_to='profile_images')
+    avatar = models.ImageField(default='default.jpg', upload_to='profile_images', blank=True, null=True)
     bio = models.TextField(default='Write Your bio here...')
 
     def __str__(self):

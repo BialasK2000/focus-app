@@ -415,7 +415,6 @@ body {
 }
 
 .user-header-info {
-    display: flex
     justify-content: space-between;
     color: #fff;
     background: rgb(0, 0, 0, 0);
@@ -430,7 +429,7 @@ body {
 }
 
 .user-nickname {
-    padding-top: 1%;
+    padding-top: 0;
     font-size: 25px;
     margin-bottom: 4px;
 }
@@ -870,4 +869,17 @@ label {
     top:50%;
     transform:translate(50%,-50%) rotate(-45deg);
     background-color:#2E4755;
+}
+
+.account-img-main {
+    position: relative;
+    right: 15px;
+    top: 30px;
+    border-radius: 49%;
+    width: 60px;
+    height: 60px;
+}
+
+.account-img {
+    border-radius: 49%;
 }
