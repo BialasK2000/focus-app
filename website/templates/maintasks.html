@@ -38,7 +38,7 @@
     </div>
 </div>
 
-    <div class="tasks-wrapper">
+    <div class="item tasks-wrapper">
         {% for task in tasks %}
         {% if task.visible == False %}
         <div class="specific-task">
@@ -75,6 +75,25 @@
         <h3>No tasks yet.</h3>
         {% endfor %}
     </div>
+</div>
+<div id="pomodoro-app">
+  <div id="container">
+    <div id="timer">
+        <div class="circle"></div>
+      <div id="time">
+        <span id="minutes">25</span>
+        <span id="colon">:</span>
+        <span id="seconds">00</span>
+      </div>
+        <button id="work">START</button><br>
+        <button id="stop">STOP</button>
+      <div id="filler"></div>
+    </div>
+    <div>
+      <button id="shortBreak">SHORT BREAK (5 min.)</button><br>
+      <button id="longBreak">LONG BREAK (15 min.)</button>
+    </div>
+  </div>
 </div>
 </body>
 </html>
