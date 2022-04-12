@@ -440,7 +440,7 @@ body {
 }
 
 .user-log {
-    margin-top: 0;
+    margin-top: 0
 }
 
 .specific-task {
@@ -882,4 +882,15 @@ label {
 
 .account-img {
     border-radius: 49%;
+}
+
+.password-change {
+    padding-top: 10px;
+    text-decoration: none;
+    color: #2E4755;
+    font-weight: bold;
+}
+
+.small mb-1 {
+    margin-bottom: 10px;
 }

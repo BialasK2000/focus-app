@@ -31,17 +31,18 @@ Profile Page
                             {{ user_form.email }}
                     </div>
                     <div class="form-group">
-                        <a href="{% url 'password_change' %}">Change Password</a>
-                        <hr>
-                        <label class="small mb-1">Change Avatar:</label>
+                        <br>
+                        <a class="password-change" href="{% url 'password_change' %}">Change Password</a>
+                        <br>
+                        <label class="small mb-1">Change your profile picture:</label>
                         {{ profile_form.avatar }}
                     </div>
                     <label class="small mb-1">Bio:</label> {{ profile_form.bio }}
                 </div>
             </div>
-            <br><br>
-            <button type="submit" class="btn btn-dark btn-lg">Save Changes</button>
-            <button type="reset" class="btn btn-dark btn-lg">Reset</button>
+            <br>
+            <button type="submit" class="button">Save Changes</button>
+            <button type="reset" class="button">Reset</button>
         </form>
     </div>
 </div>
