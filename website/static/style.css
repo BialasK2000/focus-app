@@ -7,7 +7,8 @@ body {
     margin: 0;
     padding: 0;
     background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
-    overflow: hidden;
+    background-attachment: fixed;
+    overflow-x: hidden;
 }
 
 .tlotlo {
@@ -910,10 +911,10 @@ label {
   color:#f00;
   font-size:50px;
   margin:10px auto;
-  border : 3px solid #126180;
+  border : 3px solid #1d1b31;
   border-radius:50%;
-  width:250px;
-  height:250px;
+  width:270px;
+  height:270px;
   overflow:hidden;
   position:relative;
   -webkit-user-select: none;
@@ -927,7 +928,7 @@ label {
 .circle{
   width:40px;
   height:40px;
-  background: #126180;
+  background: #1d1b31;
   border-radius:50%;
   position:absolute;
   top:0; bottom:0; left:0;right:0;
@@ -952,7 +953,7 @@ label {
 }
 
 #time{
-  margin-top:62px;
+  margin-top:83px;
   padding-bottom: 0;
   padding-top: 0;
   z-index : 1;
