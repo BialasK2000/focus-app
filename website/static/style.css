@@ -913,8 +913,8 @@ label {
   margin:10px auto;
   border : 3px solid #1d1b31;
   border-radius:50%;
-  width:270px;
-  height:270px;
+  width:220px;
+  height:220px;
   overflow:hidden;
   position:relative;
   -webkit-user-select: none;
@@ -953,7 +953,7 @@ label {
 }
 
 #time{
-  margin-top:83px;
+  margin-top:50px;
   padding-bottom: 0;
   padding-top: 0;
   z-index : 1;
